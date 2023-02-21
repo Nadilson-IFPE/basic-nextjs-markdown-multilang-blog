@@ -1,5 +1,6 @@
 import { Inter } from "@next/font/google";
 import React, { PropsWithChildren } from "react";
+import CookieBanner from "./CookieBanner";
 import Footer from "./Footer";
 import Head from "./Head";
 import NavigationBar from "./NavigationBar";
@@ -25,6 +26,7 @@ const BlogLayout = ({ children }: PropsWithChildren) => {
                         </main>
                     </div>
                 </div>
+                <CookieBanner />
                 <Footer />
             </div>
         </>
