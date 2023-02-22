@@ -38,8 +38,8 @@ const LanguageSelector = () => {
             setCookie('DEFAULT_LOCALE', language, {
                 path: '/',
                 maxAge: 31536000,
-                // sameSite: 'none',
-                //  secure: true,
+                sameSite: 'none',
+                secure: true,
             })
         }
     }
