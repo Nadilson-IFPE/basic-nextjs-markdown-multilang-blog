@@ -1,7 +1,14 @@
 export default {
+    website_title: 'Blog Multi-Idiomas',
+    website_description: 'Modelo básico de blog multi-idiomas',
+
     nav_home: 'Início',
-    nav_blog: 'Meu Blog',
+    nav_blog: 'Blog',
     nav_about: 'Sobre',
+
+    cookie_banner_text: 'Este site utiliza cookies APENAS para salvar o idioma selecionado pelo usuário para que, da próxima vez, não seja preciso selecioná-lo novamente. Não serão utilizados para quaisquer outras finalidades.',
+    cookie_banner_decline_button: 'Recuso',
+    cookie_banner_accept_button: 'Aceito',
     
     about_page_greeting: 'Olá.',
     about_page_text: 'Meu nome é Nadilson. Sou desenvolvedor de software e, também, Historiador. No momento, além de estar procurando emprego novo, tenho investido meu tempo livre para "brincar" com várias tecnologias e frameworks, mas sem deixar de ler meus livros e artigos relacionados às duas áreas a que pertenço. Também sou chegado em tocar guitarra. Tanto que tenho três, cada uma com uma afinação diferente para tocar Metal Extremo (Drop C, Drop D e Drop C#), uma desculpa que usei para torrar dinheiro em guitarras.',
@@ -32,5 +39,7 @@ export default {
     <br />
     Possui fast refresh, ou seja, não precisa recarregar o navegador para atualizar os elementos da página.
     <br /> <br />
-    Fonte: {' '}`,
+    Fonte:`,
+
+    posts_info: 'Postagens por data (da mais nova para a mais antiga)',
 }

@@ -1,7 +1,10 @@
+import { useLanguages } from "@/hooks/useLanguages";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
 const CookieBanner = () => {
+    const translateString = useLanguages()
+
     const [cookie, setCookie] = useCookies(['userHasBeenWarnedAboutCookies'])
 
     const [cookieExists, setCookieExists] = useState(true)
@@ -38,20 +41,20 @@ const CookieBanner = () => {
         <>
             <div className="modal p-4 bg-[#161032] top-0 z-50 left-0 fixed w-screen items-center flex justify-center" role="dialog" aria-modal="true" tabIndex={1}>
                 <div className="flex-shrink flex-1">
-                    <span className="md:text-xl lg:text-xl xl:text-2xl text-yellow-200 text-left">Este site utiliza cookies APENAS para salvar o idioma selecionado pelo usário para que, da próxima vez, não seja preciso selecioná-lo novamente. Não serão utilizados para quaisquer outras finalidades.</span>
+                    <span className="md:text-xl lg:text-xl xl:text-2xl text-yellow-200 text-left">{translateString.cookie_banner_text}</span>
                 </div>
 
                 <div className="flex-shrink flex">
                     <button onClick={() => {
                         setUserHasBeenWarnedAboutCookies(false)
                     }} className="flex-shrink flex bg-indigo-500 m-5 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none text-base font-medium focus:ring-1 focus:ring-indigo-200" data-bs-dismiss="modal">
-                        Recuso
+                        {translateString.cookie_banner_decline_button}
                     </button>
 
                     <button onClick={() => {
                         setUserHasBeenWarnedAboutCookies(true)
                     }} className="flex-shrink flex bg-indigo-500 m-5 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none text-base font-medium focus:ring-1 focus:ring-indigo-200">
-                        Aceito
+                        {translateString.cookie_banner_accept_button}
                     </button>
                 </div>
             </div >

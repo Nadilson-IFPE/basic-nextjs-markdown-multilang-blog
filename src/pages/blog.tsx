@@ -3,6 +3,7 @@ import { GetStaticPropsContext, NextPage } from "next"
 import fs from 'fs'
 import path from 'path'
 import matter from "gray-matter"
+import { useLanguages } from "@/hooks/useLanguages"
 
 
 type BlogProps = {
@@ -29,10 +30,12 @@ function precedaComZero(numero: number) {
 }
 
 const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
+    const translateString = useLanguages()
+
     return (
         <>
             <h1 className="text-white">BLOG</h1>
-            <h2 className="text-white">Aqui, serão listadas todas as postagens com data começando da mais nova para a mais antiga.</h2>
+            <h2 className="text-white">{translateString.posts_info}</h2>
 
             {posts.map((post, idx) => {
                 return (

@@ -1,7 +1,14 @@
 export default {
+    website_title: 'Multi-Language Blog',
+    website_description: 'Basic multilingual blog template',
+
     nav_home: 'Home',
-    nav_blog: 'My Blog',
+    nav_blog: 'Blog',
     nav_about: 'About',
+
+    cookie_banner_text: `This website uses cookies ONLY to save the language selected by the user so that the next time the user does not have to select it again. They will not be used for any other purposes.`,
+    cookie_banner_decline_button: 'I decline',
+    cookie_banner_accept_button: 'I accept',
 
     about_page_greeting: 'Olá.',
     about_page_text: `My name is Nadilson. I'm a software developer and also a historian. At the moment, in addition to looking for a new job, I've been investing my free time to "play" with various technologies and frameworks, while still reading my books and articles related to the two areas I belong to. I'm also into playing the electric guitar. So much so that I have three, each one with a different tuning to play Extreme Metal (Drop C, Drop D and Drop C#), an excuse I used to spend money on this type of musical instrument.`,
@@ -31,5 +38,7 @@ export default {
     <br />
     It has fast refresh, that is, you don't need to reload the browser to update the page elements.
     <br /> <br />
-    Source: {' '}`,
+    Source:`,
+
+    posts_info: 'Posts by date (newest to oldest)',
 }
