@@ -1,12 +1,12 @@
 import React from "react";
 
 import { NextPage } from 'next';
-import AboutPage from '@/components/About';
+import HomePage from "@/components/Home";
 
 
 const Home: NextPage = () => {
   return (
-    <AboutPage />
+    <HomePage />
   );
 }
 
