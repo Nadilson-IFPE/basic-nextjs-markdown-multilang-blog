@@ -15,6 +15,7 @@ const NavigationBar = () => {
           <div className="fixed flex text-white font-normal gap-2 md:gap-4">
             <Link href="/" className='underline hover:text-yellow-500 underline-offset-[6px] transition-colors duration-300'>Início</Link>
             <Link href="/about" className='underline:none hover:text-yellow-500 hover:underline underline-offset-[6px] transition-colors duration-300'>Sobre</Link>
+            <Link href="/blog" className='underline:none hover:text-yellow-500 hover:underline underline-offset-[6px] transition-colors duration-300'>Meu Blog</Link>
           </div>
           <hr className='lines' />
 
