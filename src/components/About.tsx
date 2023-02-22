@@ -27,11 +27,10 @@ const AboutPage = () => {
                 </p>
 
                 <div className="mt-1 flex justify-center">
-                    <div className="flex space-x-4 font-medium text-gray-800 dark:text-white sm:block md:flex lg:flex"></div>
                     <p className="text-white">Encontre-me em:</p>
                     <Link
                         href="https://github.com/Nadilson-IFPE"
-                        className="px-3 font-medium uppercase tracking-wider transition-colors hover:text-yellow-500 dark:text-white"
+                        className="px-3 font-medium tracking-wider transition-colors hover:text-yellow-500 dark:text-white"
                         target="_blank"
                         rel="noreferrer"
                         passHref>
@@ -42,13 +41,12 @@ const AboutPage = () => {
                             className="transform transition duration-500 hover:scale-105"
                             width={30}
                             height={30}
-                            placeholder="blur"
                         />
                     </Link>
 
                     <Link
                         href="https://wa.me/+5581986723962"
-                        className="font-medium uppercase tracking-wider transition-colors hover:text-yellow-500 dark:text-white"
+                        className="font-medium tracking-wider transition-colors hover:text-yellow-500 dark:text-white"
                         target="_blank"
                         rel="noreferrer"
                         passHref>
@@ -56,12 +54,9 @@ const AboutPage = () => {
                             src={whatsapp}
                             alt="WhatsApp de Nadilson José Rodrigues Teixeira"
                             priority={true}
-                            className={
-                                'transform transition duration-500 hover:scale-105'
-                            }
+                            className="transform transition duration-500 hover:scale-105"
                             width={30}
                             height={30}
-                            placeholder="blur"
                         />
                     </Link>
                 </div>

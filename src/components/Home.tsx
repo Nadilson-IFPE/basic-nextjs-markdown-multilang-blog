@@ -22,10 +22,9 @@ const HomePage = () => {
                 <p className="mb-6">
                     O interessante é que Next.js permite o desenvolvimento de aplicações no lado usuário e no lado servidor.
                 </p>
+                <p className="text-center font-bold">Características de Next.js</p>
+                <br />
                 <p className="mb-6">
-                    <p className="text-center font-bold">Características de Next.js</p>
-                    <br />
-
                     Entre as várias características de Next.js, as quais o diferenciam de
                     outros frameworks da família JavaScript, estão:
                     <br /> <br />
