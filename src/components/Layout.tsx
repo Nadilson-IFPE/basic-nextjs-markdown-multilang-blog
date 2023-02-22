@@ -9,7 +9,10 @@ import NavigationBar from "./NavigationBar";
     children: React.ReactNode | undefined
 } */
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
+});
 
 const BlogLayout = ({ children }: PropsWithChildren) => {
     return (
@@ -21,8 +24,10 @@ const BlogLayout = ({ children }: PropsWithChildren) => {
             <div className={inter.className}>
                 <div className="min-w-screen bg-[#303049] min-h-screen">
                     <div className="mx-auto flex max-w-5xl flex-col antialiased">
-                        <main className="pt-52 pb-36 sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-center">
-                            {children}
+                        <main className="pt-40 pb-24 text-center">
+                            <div className="w-full max-w-5xl px-2 mx-auto md:px-4">
+                                {children}
+                            </div>
                         </main>
                     </div>
                 </div>

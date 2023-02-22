@@ -6,7 +6,7 @@ import Link from 'next/link';
 const NavigationBar = () => {
   return (
     <>
-      <nav className="p-1 pt-1 px-5 fixed z-100 w-screen bg-[#303049]">
+      <nav className="p-1 pt-5 px-5 fixed z-100 w-screen bg-[#303049]">
         <Link href="/"
           className="sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold">
           Blog Multi-Idiomas

@@ -36,25 +36,26 @@ const CookieBanner = () => {
 
     return (
         <>
-            <div className="modal p-4 bg-[#324376] bottom-0 z-50 left-0 fixed w-screen items-center flex justify-center aria" role="dialog" aria-modal="true" tabIndex={1}>
-                <div className="flex-1">
-                    <span className="font-extrabold text-2xl text-yellow-400 text-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+            <div className="modal p-4 bg-[#161032] top-0 z-50 left-0 fixed w-screen items-center flex justify-center" role="dialog" aria-modal="true" tabIndex={1}>
+                <div className="flex-shrink flex-1">
+                    <span className="md:text-xl lg:text-xl xl:text-2xl text-yellow-200 text-left">Este site utiliza cookies APENAS para salvar o idioma selecionado pelo usário para que, da próxima vez, não seja preciso selecioná-lo novamente. Não serão utilizados para quaisquer outras finalidades.</span>
                 </div>
 
-                <div className="flex">
+                <div className="flex-shrink flex">
                     <button onClick={() => {
                         setUserHasBeenWarnedAboutCookies(false)
-                    }} className="bg-indigo-500 m-5 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none text-base font-medium  focus:ring-1 focus:ring-indigo-200" data-bs-dismiss="modal">
+                    }} className="flex-shrink flex bg-indigo-500 m-5 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none text-base font-medium focus:ring-1 focus:ring-indigo-200" data-bs-dismiss="modal">
                         Recuso
                     </button>
 
                     <button onClick={() => {
                         setUserHasBeenWarnedAboutCookies(true)
-                    }} className="bg-indigo-500 m-5 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none text-base font-medium  focus:ring-1 focus:ring-indigo-200">
+                    }} className="flex-shrink flex bg-indigo-500 m-5 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none text-base font-medium focus:ring-1 focus:ring-indigo-200">
                         Aceito
                     </button>
                 </div>
             </div >
+            <div className="fixed inset-0 bg-[#2F3E46] z-10 bg-opacity-75 transition-opacity h-screen w-screen" />
         </>
     )
 };
