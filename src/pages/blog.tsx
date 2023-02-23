@@ -4,6 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from "gray-matter"
 import { useLanguages } from "@/hooks/useLanguages"
+import BlogCard from "@/components/BlogCard"
 
 
 type BlogProps = {
@@ -34,10 +35,12 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
 
     return (
         <>
-            <h1 className="text-white">BLOG</h1>
-            <h2 className="text-white">{translateString.posts_info}</h2>
+            <h1 className="text-blue-200 font-bold">BLOG</h1>
+            <h2 className="text-blue-200 mb-10 font-bold">{translateString.posts_info}</h2>
 
-            {posts.map((post, idx) => {
+
+            {/* Para testes */}
+            {/* {posts.map((post, idx) => {
                 return (
                     console.log(
                         'Key: ' + Math.random(),
@@ -54,7 +57,31 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                         '\nVídeo da postagem: ' + post.frontmatter.post_video
                     )
                 )
-            })}
+            })} */}
+
+            <div className="flex flex-col-reverse">
+                {
+                    posts.map((post, idx) => {
+                        return (
+                            <BlogCard
+                                key={idx}
+                                cardIndex={idx}
+                                cardNumber={precedaComZero(posts.length - idx)}
+                                author={post.frontmatter.author}
+                                author_image={post.frontmatter.author_image}
+                                author_email={post.frontmatter.author_email}
+                                post_image={`${post.frontmatter.post_image}`}
+                                post_thumbnail={`${post.frontmatter.post_thumbnail}`}
+                                post_date={post.frontmatter.post_date}
+                                post_title={post.frontmatter.post_title}
+                                post_summary={post.frontmatter.post_summary}
+                                post_video={''}
+                                post_link={`/blog/${encodeURIComponent(post.slug)}`}
+                            />
+                        )
+                    })
+                }
+            </div>
         </>
     )
 }
