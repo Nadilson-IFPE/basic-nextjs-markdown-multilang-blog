@@ -1,6 +1,6 @@
 const wordsPerMinute = 265
 
-export default function readingTime(text: string) {
+export default function timeToReadText(text: string) {
     const wordsCount = text.trim().split(/\s+/).length;
     return Math.ceil(wordsCount / wordsPerMinute).toString()
 }
