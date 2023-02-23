@@ -16,6 +16,7 @@ interface BlogCardProps {
     post_summary: string
     post_video?: string
     post_link: string,
+    post_reading_time?: string;
 }
 
 const BlogCard = ({
@@ -30,7 +31,8 @@ const BlogCard = ({
     post_title,
     post_summary,
     post_video,
-    post_link
+    post_link,
+    post_reading_time
 }: BlogCardProps) => {
 
     const translateString = useLanguages()
@@ -44,7 +46,7 @@ const BlogCard = ({
                     className="bg-[#303049] pt-5 p-10 pb-2 sm:text-xs md:text-sm lg:text-sm xl:text-lg hover:bg-[#393957]">
                     <div className="row-span-3">
                         <div className="flex">
-                            <p className="font-bold text-sm leading-5 text-zinc-300">Publicado por:</p>
+                            <p className="font-bold text-sm leading-5 text-zinc-300">{translateString.posts_publisher}</p>
                             <p className="px-1 font-bold leading-5 text-sm text-zinc-300">{author}</p>
                             <p className="-mt-1 px-1 font-normal leading-5 text-sm text-zinc-300">.</p>
                             <p className="px-1 font-normal leading-5 text-sm text-zinc-300">{post_date}</p>
@@ -60,8 +62,8 @@ const BlogCard = ({
                             </div>
                         </div>
                         <div className="flex flex-1 break-words">
-                            <div className="text-sm block pt-20">
-                                <span className="mt-2 text-sm text-white">[Tempo estimado de leitura]</span>
+                            <div className="text-sm block pt-10">
+                                <span className="mt-2 text-sm text-white">{translateString.posts_reading_time}{post_reading_time}</span>
                             </div>
                         </div>
 

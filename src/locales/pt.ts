@@ -42,6 +42,8 @@ export default {
     Fonte:`,
 
     posts_info: 'Postagens por data (da mais nova para a mais antiga)',
+    posts_publisher: 'Publicado por: ',
+    posts_reading_time: 'Tempo estimado para leitura: ',
 
     slug_go_back_button: 'Voltar',
     slug_post_date: 'Data: ',

@@ -5,6 +5,8 @@ import path from 'path'
 import matter from "gray-matter"
 import { useLanguages } from "@/hooks/useLanguages"
 import BlogCard from "@/components/BlogCard"
+import timeToReadText from "@/helpers/timeToReadText"
+import { useRouter } from 'next/router';
 
 
 type BlogProps = {
@@ -30,8 +32,20 @@ function precedaComZero(numero: number) {
     return (numero < 10 ? '0' : '') + numero
 }
 
+function estimatedReadingTime(text: string, locale: string | undefined) {
+    const resultado = timeToReadText(text);
+
+    if (locale === 'pt') {
+        return resultado === '1' ? resultado + ' minuto.' : resultado + ' minutos.';
+    } else {
+        return resultado === '1' ? resultado + ' minute.' : resultado + ' minutes.';
+    }
+}
+
 const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
     const translateString = useLanguages()
+
+    const { locale } = useRouter()
 
     return (
         <>
@@ -76,6 +90,7 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                                 post_title={post.frontmatter.post_title}
                                 post_summary={post.frontmatter.post_summary}
                                 post_video={''}
+                                post_reading_time={estimatedReadingTime(post.content, locale)}
                                 post_link={`/blog/${encodeURIComponent(post.slug)}`}
                             />
                         )
