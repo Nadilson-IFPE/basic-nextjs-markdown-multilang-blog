@@ -1,9 +1,9 @@
 ---
 author: 'Nadilson'
-author_image: '[PATH]'
+author_image: '/images/me.png'
 author_email: 'nadilson@protonmail.com'
-post_image: '[PATH]'
-post_thumbnail: '[PATH]'
+post_image: '/images/nextjs.png'
+post_thumbnail: '/images/nextjs.png'
 post_date: '20/02/2023'
 post_title: 'Postagem de exemplo número 4'
 post_summary: 'Esta é uma breve descrição da postagem que será exibida ao usuário'

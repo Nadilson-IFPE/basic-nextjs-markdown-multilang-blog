@@ -41,4 +41,8 @@ export default {
     Source:`,
 
     posts_info: 'Posts by date (newest to oldest)',
+
+    slug_go_back_button: 'Go back',
+    slug_post_date: 'Date: ',
+    slug_post_author: 'Author: ',
 }
