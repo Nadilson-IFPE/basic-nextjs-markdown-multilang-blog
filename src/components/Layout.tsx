@@ -24,7 +24,7 @@ const BlogLayout = ({ children }: PropsWithChildren) => {
             <div className={inter.className}>
                 <div className="min-w-screen bg-[#303049] min-h-screen">
                     <div className="mx-auto flex max-w-5xl flex-col antialiased">
-                        <main className="pt-40 pb-24 text-center">
+                        <main className="md:pt-40 md:pb-24 sm:pt-10 sm:pb-10 text-center">
                             <div className="w-full max-w-5xl px-2 mx-auto md:px-4">
                                 {children}
                             </div>

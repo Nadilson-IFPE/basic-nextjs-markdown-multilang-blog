@@ -50,7 +50,7 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
     return (
         <>
             <h1 className="text-blue-200 font-bold">BLOG</h1>
-            <h2 className="text-blue-200 mb-10 font-bold">{translateString.posts_info}</h2>
+            <h2 className="text-blue-200 mb-10 md:font-bold lg:font-bold xl:font-bold 2xl:font-bold sm:font-bold">{translateString.posts_info}</h2>
 
 
             {/* Para testes */}

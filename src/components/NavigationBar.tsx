@@ -4,6 +4,7 @@ import Link from 'next/link';
 import ThreeDotsDivider from './ThreeDotsDivider';
 import LanguageSelector from './LanguageSelector';
 import { useLanguages } from '@/hooks/useLanguages';
+import MobileNavigationBar from './MobileNavigationBar';
 
 
 const NavigationBar = () => {
@@ -12,7 +13,9 @@ const NavigationBar = () => {
 
   return (
     <>
-      <nav className="p-1 pt-5 px-5 fixed z-100 w-screen bg-[#303049]">
+      {/* Menu para dispositivos móveis */}
+      <MobileNavigationBar />
+      <nav className="invisible p-1 pt-5 px-5 fixed z-100 w-screen bg-[#303049] md:visible lg:visible xl:visible 2xl:visible">
         <Link href="/"
           className="sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold">
           {translateString.website_title}
